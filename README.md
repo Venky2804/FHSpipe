@@ -8,16 +8,16 @@ Required python version newer than 3.5.0
 os,shutil, subprocess, argparse, sys, json, yaml 
 
 ### TOOLS NEEDED:
-- fastp (https://github.com/OpenGene/fastp)  
-- hisat2 (http://daehwankimlab.github.io/hisat2/)  
-- samtools (http://www.htslib.org/download/)  
-- stringtie (https://ccb.jhu.edu/software/stringtie)  
-- prepDE.py script (https://ccb.jhu.edu/software/stringtie/dl/prepDE.py - Place along with Stringtie)  
-- gffcompare (https://ccb.jhu.edu/software/stringtie/gffcompare.shtml)  
-- bedtools (https://github.com/arq5x/bedtools2/releases)  
+- Fastp (https://github.com/OpenGene/fastp)  
+- Hisat2 (http://daehwankimlab.github.io/hisat2/)  
+- Samtools (http://www.htslib.org/download/)  
+- Stringtie (https://ccb.jhu.edu/software/stringtie)  
+- PrepDE.py script (https://ccb.jhu.edu/software/stringtie/dl/prepDE.py - Place along with Stringtie)  
+- Gffcompare (https://ccb.jhu.edu/software/stringtie/gffcompare.shtml)  
+- Bedtools (https://github.com/arq5x/bedtools2/releases)  
 - OrfPredictor (http://proteomics.ysu.edu/publication/tools_download/OrfPredictor.zip)  
 - CPC2 (http://cpc2.gao-lab.org/download.php)  
-- rpsblast (NCBI Blast+ suite) (http://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)  
+- RPSBlast (NCBI Blast+ suite) (http://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)  
 
 ### FILES REQUIRED:
 - Reference genome fasta file (.fasta/.fa)  
