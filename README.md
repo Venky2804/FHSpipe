@@ -34,8 +34,8 @@ fhs_glm_pipeline.py [-h] [-p PATH] [-s SPCS] [-r REF] [-g GFF] [--len LEN] [--or
 > A program to run FHS pipeline i.e. FASTp, HISAT2, STRINGTIE, MERGE, GFFCOMPARE, STRINGTIE 2, PREPDE, extract potential lncRNAs (IUX)  
 >
 > ### Required arguments:
-> -p PATH, --path --> PATHPath of sample fastq files  
-> -s SPCS, --spcs --> SPCSReference species name  
+> -p PATH, --path PATH --> Path of sample fastq files  
+> -s SPCS, --spcs SPCS --> Reference species name  
 >  
 > ### Optional arguments:  
 > -h, --help --> show this help message and exit  
