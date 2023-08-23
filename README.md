@@ -1,6 +1,9 @@
 # FHSpipe
 Transcriptome analysis pipeline using Fastp, Hisat2 and Stringtie
 
+![FHSpipe](https://github.com/Venky2804/FHSpipe/assets/110457541/af63d05b-a8ae-49cf-85c8-1b9ee63fbd24)
+
+
 ## R E Q U I R E M E N T S
 Required python version newer than 3.5.0 
 
