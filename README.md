@@ -1,11 +1,11 @@
 # FHSpipe
-Transcriptome analysis pipeline using Fastp, Hisat2 and Stringtie
+Transcriptome analysis pipeline using Fastp, Hisat2 and Stringtie. Generates read count files for differential expression analysis using popular R programs like edgeR or DEseq2
 
-![FHSpipe](https://github.com/Venky2804/FHSpipe/assets/110457541/af63d05b-a8ae-49cf-85c8-1b9ee63fbd24)
-
+![Figure representing the FHSpipe flowchart](https://github.com/Venky2804/FHSpipe/assets/110457541/af63d05b-a8ae-49cf-85c8-1b9ee63fbd24 "Figure representing the FHSpipe flowchart")
+### _<div align="center"> <ins> Figure representing the FHSpipe flowchart </ins> </div>_
 
 ## R E Q U I R E M E N T S
-Required python version newer than 3.5.0 
+Requires python version newer than 3.5.0 
 
 ### Python modules:
 os,shutil, subprocess, argparse, sys, json, yaml 
@@ -37,18 +37,18 @@ fhs_glm_pipeline.py [-h] [-p PATH] [-s SPCS] [-r REF] [-g GFF] [--len LEN] [--or
 > A program to run FHS pipeline i.e. FASTp, HISAT2, STRINGTIE, MERGE, GFFCOMPARE, STRINGTIE 2, PREPDE, extract potential lncRNAs (IUX)  
 >
 > ### Required arguments:
-> -p PATH, --path PATH --> Path of sample fastq files  
-> -s SPCS, --spcs SPCS --> Reference species name  
+> -p PATH,&emsp;&emsp;--path PATH&emsp;&emsp;&emsp;&ensp;-->&ensp;Path of sample fastq files  
+> -s SPCS,&emsp;&emsp;--spcs SPCS&emsp;&emsp;&emsp;&emsp;-->&ensp;Reference species name  
 >  
 > ### Optional arguments:  
-> -h, --help --> show this help message and exit  
-> -r REF, --ref REF --> Path of reference genome fasta file if species is not available  
-> -g GFF, --gff GFF --> Path of reference genome gtf/gff file if species is not available  
-> --len LEN --> Length filter cut off [Default: 200]  
-> --orfl ORFL --> ORF Length filter cut off [Default: 300]  
-> -o OUT, --out OUT --> Prefix of output files [Default: out]  
-> -t THREADS, --threads THREADS --> Number of threads to use in Hisat2, Samtools, Stringtie. [Default: 1]  
-> --lnc --> Use to only extract lncRNAs and skip file processing for differential expression  
+> -h,&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;--help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;-->&ensp;Show this help message and exit  
+> -r REF,&emsp;&emsp;&emsp;--ref REF&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;-->&ensp;Path of reference genome fasta file if species is not available  
+> -g GFF,&emsp;&emsp;&ensp;&nbsp;--gff GFF&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;-->&ensp;Path of reference genome gtf/gff file if species is not available  
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--len LEN&emsp;&emsp;&emsp;&emsp;&emsp;-->&ensp;Length filter cut off [Default: 200]  
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--orfl ORFL&emsp;&emsp;&emsp;&emsp;&nbsp;-->&ensp;ORF Length filter cut off [Default: 300]  
+> -o OUT,&emsp;&emsp;&ensp;--out OUT&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;-->&ensp;Prefix of output files [Default: out]  
+> -t THREADS,&nbsp;--threads THREADS&ensp;-->&ensp;Number of threads to use in Hisat2, Samtools, Stringtie. [Default: 1]  
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;--lnc&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;-->&ensp;Use to only extract lncRNAs and skip file processing for differential expression  
 
 
 
