@@ -44,8 +44,8 @@ fhs_glm_pipeline.py [-h] [-p PATH] [-s SPCS] [-r REF] [-g GFF] [--len LEN] [--or
 > -h,&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;--help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;-->&ensp;Show this help message and exit  
 > -r REF,&emsp;&emsp;&emsp;--ref REF&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;-->&ensp;Path of reference genome fasta file if species is not available  
 > -g GFF,&emsp;&emsp;&ensp;&nbsp;--gff GFF&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;-->&ensp;Path of reference genome gtf/gff file if species is not available  
-> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--len LEN&emsp;&emsp;&emsp;&emsp;&emsp;-->&ensp;Length filter cut off (In number of nucleotides) [Default: 200 nucleotides]  
-> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--orfl ORFL&emsp;&emsp;&emsp;&emsp;&nbsp;-->&ensp;ORF Length filter cut off (In number of nucleotides) [Default: 300 nucleotides]  
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--len LEN&emsp;&emsp;&emsp;&emsp;&emsp;-->&ensp;Length filter cut off (In number of nucleotides) [Default: 200]  
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--orfl ORFL&emsp;&emsp;&emsp;&emsp;&nbsp;-->&ensp;ORF Length filter cut off (In number of nucleotides) [Default: 300]  
 > -o OUT,&emsp;&emsp;&ensp;--out OUT&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;-->&ensp;Prefix of output files [Default: out]  
 > -t THREADS,&nbsp;--threads THREADS&ensp;-->&ensp;Number of threads to use in Hisat2, Samtools, Stringtie. [Default: 1]  
 > &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;--lnc&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;-->&ensp;Use to only extract lncRNAs and skip file processing for differential expression  
