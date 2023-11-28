@@ -81,8 +81,7 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
             sys.exit(1)
         os.remove("empty")
         ##########     ORF DNA FILTER     ##########
-        print("Filtering sequences with ORFs less than", orfl, "nucleotides", end="\t")
-        orfl = int(orfl/3)
+        print("Filtering sequences with ORFs less than", orfl, "aminoacids", end="\t")
         lenfil = open(out+"_lenfil.fasta").read().splitlines() #Reads Len fil file
         orf6 =  open("ORF6frame.txt").readlines()
         dna = [] #DNA header index list
