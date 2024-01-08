@@ -117,7 +117,7 @@ for f in sorted(os.listdir(folder)):
     if args.seq == "S":
         x = f.split(".")[0]
     elif args.seq == "P":
-        x = f.split("_")[0]
+        x = f.split("_R")[0]
     if x not in d and f.endswith(".fastq"):
         print("Assembling", str(x), end = "", flush=True)
         print("Assembling", str(x), end = "", file = log, flush=True)
