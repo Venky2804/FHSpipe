@@ -6,7 +6,7 @@ def run(seq, fastp, x, fpres):
     if seq == "S":
         fp = fastp+" -h ../qc/"+x+".html -j ../qc/"+x+".json -a auto -w 16 -e 25 -l 30 -p -i "+x+".fastq -o ../qc/"+x+".fastq"
     elif seq == "P":
-        fp = fastp+" --detect_adapter_for_pe --correction -h ../qc/"+x+".html -j ../qc/"+x+".json -a auto -w 16 -e 25 -l 30 -p -i "+x+"_1.fastq -I "+x+"_2.fastq -o ../qc/"+x+"_1.fastq -O ../qc/"+x+"_2.fastq"
+        fp = fastp+" --detect_adapter_for_pe --correction -h ../qc/"+x+".html -j ../qc/"+x+".json -a auto -w 16 -e 25 -l 30 -p -i "+x+"_R1.fastq -I "+x+"_R2.fastq -o ../qc/"+x+"_R1.fastq -O ../qc/"+x+"_R2.fastq"
     fp1 = fp.split()
     s1 = subprocess.run(fp1, stderr=subprocess.DEVNULL)
     if not s1.returncode == 0:
