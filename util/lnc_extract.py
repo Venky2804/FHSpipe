@@ -108,29 +108,35 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
                         delete.append(g)
         print("-\tRetained", (len(dna)-len(delete)))
         print("Sequences retained after ORF filtering:", (len(dna)-len(delete)), file = log)
-        orffil = open(out+"_orffil.fasta", "w+") #orf filtered dna fasta
-        for w in dna:
-            if lenfil[w] not in delete:
-                print(lenfil[w], file=orffil)
-                print(lenfil[w+1], file=orffil)
+        #orffil = open(out+"_orffil.fasta", "w+") #orf filtered dna fasta
+        #for w in dna:
+        #    if lenfil[w] not in delete:
+        #        print(lenfil[w], file=orffil)
+        #        print(lenfil[w+1], file=orffil)
         dele2 = open("delete_orffilter", "w+")
         for x in delete:
             print(x, file = dele2)
-        orffil.close()
+        #orffil.close()
         dele2.close()
         ##########     ORF PROTEIN FILTER     ##########
         orfout = open(out+"_orfout.fasta").read().splitlines()
         dele2 = open("delete_orffilter").read().splitlines()
         orfptn = open(out+"_ptn_orffil.fasta", "w+") #orf filtered ptn fasta
         dis = []
+        orfhead = [] #line nums of headers in ORF out file
         for line in dele2:
             dis.append(line)
-        for line in range(len(orfout)):
-            new = orfout[line].split("\t")
-            for x in new:
-                if x.startswith(">") and x not in dis:
-                    print(orfout[line], file = orfptn)
-                    print(orfout[line+1], file = orfptn)
+        for lind in range(len(orfout)):
+            if orfout[lind].startswith(">"):
+                orfhead.append(lind)
+        orfhead.append(len(orfout))
+        for line in range(len(orfhead)-1):
+            x = orfout[orfhead[line]].split("\t")[0]
+            if x not in dis:
+                print(x, file = orfptn)
+                strt = orfhead[line]+1
+                end = orfhead[line+1]
+                print("".join(orfout[strt:end]), file = orfptn)
         orfptn.close()
         print("orf-filter", file = done, flush=True)
     else:
@@ -148,7 +154,6 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
         rpsfil = open(out+"_rpsfil.fasta", "w+") #RPS (PFAM) filtered DNA fasta
         rpsout = open(out+"_pfam_rps").read().splitlines() #RPS output file
         norf = open("noOrf.txt").read().splitlines() #No orf file from OrfPredictor.pl
-        orffil = open(out+"_orffil.fasta").read().splitlines() #ORF filtered DNA sequences
         RPS = []
         for index in range(len(rpsout)):
             if rpsout[index].startswith("# Query"):
@@ -162,11 +167,11 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
         for nof in norf:
             if not nof.startswith("Sequence"):
                 RPS.append(">"+nof.split("\t")[0])
-        for shind in range(len(orffil)):
-            if orffil[shind].startswith(">"):
-                if orffil[shind] in RPS:
-                    print(orffil[shind], file=rpsfil)
-                    print(orffil[shind+1], file=rpsfil)
+        for shind in range(len(lenfil)):
+            if lenfil[shind].startswith(">"):
+                if lenfil[shind] in RPS:
+                    print(lenfil[shind], file=rpsfil)
+                    print(lenfil[shind+1], file=rpsfil)
         rpsfil.close()
         print("RPS-filter", file = done, flush=True)
     else:
