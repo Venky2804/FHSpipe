@@ -108,15 +108,9 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
                         delete.append(g)
         print("-\tRetained", (len(dna)-len(delete)))
         print("Sequences retained after ORF filtering:", (len(dna)-len(delete)), file = log)
-        #orffil = open(out+"_orffil.fasta", "w+") #orf filtered dna fasta
-        #for w in dna:
-        #    if lenfil[w] not in delete:
-        #        print(lenfil[w], file=orffil)
-        #        print(lenfil[w+1], file=orffil)
         dele2 = open("delete_orffilter", "w+")
         for x in delete:
             print(x, file = dele2)
-        #orffil.close()
         dele2.close()
         ##########     ORF PROTEIN FILTER     ##########
         orfout = open(out+"_orfout.fasta").read().splitlines()
