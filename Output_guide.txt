@@ -20,7 +20,7 @@ Below are the directories one previous to the given sample path (sample path/..)
 |  |  |  |  |-- iux_merge.gtf: Annotation file for lncRNA assembly based on extracted lncRNAs.
 |  |  |  |  |-- pde_lnc.txt: File with list of assembled transcript gtf files of lncRNAs.
 |  |  |  |  |-- stringtie_res.txt: File with results of lncRNA transcript assembly.
-|**|  |  |__|-- transcript_count_matrix.csv: lncRNA transcript count matrix. Used as input to edgeR/DEseq for differential expression analysis of lncRNAs.*
+|  |  |  |__|-- transcript_count_matrix.csv: lncRNA transcript count matrix. Used as input to edgeR/DEseq for differential expression analysis of lncRNAs.*
 |  |  |  |
 |  |  |  |-- delete_lenfilter: File with list of Transcripts (with TCONS ids) discarded during length filter (Length < 200 nucleotides).
 |  |  |  |-- delete_orffilter: File with list of Transcripts (with TCONS ids) discarded during ORF filter (ORF > 300 nucleotides).
@@ -29,7 +29,7 @@ Below are the directories one previous to the given sample path (sample path/..)
 |  |  |  |-- out.bed: BED file containing coordinates of all the sequences of classcodes I, U, X.
 |  |  |  |-- out.fasta: FASTA file containing DNA sequences of all the sequences of classcodes I, U, X.
 |  |  |  |-- out_cpc.txt: Output file of CPC2 tool.
-|**|  |  |-- out_final_lnc.fasta: FASTA file containing the sequences of Final potential lncRNAs.**
+|  |  |  |-- out_final_lnc.fasta: FASTA file containing the sequences of Final potential lncRNAs.**
 |  |  |  |-- out_lenfil.fasta: Output file of length filter (Sequences > 200 nucleotides).
 |  |  |  |-- out_orffil.fasta: Output DNA fasta file of ORF filter (ORF < 300 nucleotides).
 |  |  |  |-- out_orfout.fasta: Output peptide fasta file of ORFpredictor.
@@ -38,17 +38,17 @@ Below are the directories one previous to the given sample path (sample path/..)
 |  |  |  |-- out_rpsfil.fasta: Output DNA fasta file of PFAM/RPSBlast filter (Nohits).
 |  |  |__|-- slop.bed: BED file containing coordinates (with 50 bases slop/added on both sides) of all the sequences of classcodes I, U, X.
 |  |  |
-|##|  |-- gff.combined.gtf: GFFCompare Output GTF file with annotation details including classcodes of transcripts of all the input samples.#
-|##|  |-- gffcmp.loci: This file matches transcripts between samples. Each row represents a transcript structure that is preserved across all the input samples.#
-|##|  |-- gffcmp.stats: GFFCompare Output file Data summary and accuracy estimation compared to reference (provided with the -r option).#
-|##|__|-- gffcmp.tracking:  Same as .loci file with extra details of transcripts in 4th col: <gene_id>|<transcript_id>|<num_exons>|<FPKM>|<TPM>|<cov>|<len>.#
+|  |  |-- gff.combined.gtf: GFFCompare Output GTF file with annotation details including classcodes of transcripts of all the input samples.#
+|  |  |-- gffcmp.loci: This file matches transcripts between samples. Each row represents a transcript structure that is preserved across all the input samples.#
+|  |  |-- gffcmp.stats: GFFCompare Output file Data summary and accuracy estimation compared to reference (provided with the -r option).#
+|  |__|-- gffcmp.tracking:  Same as .loci file with extra details of transcripts in 4th col: <gene_id>|<transcript_id>|<num_exons>|<FPKM>|<TPM>|<cov>|<len>.#
 |  |
 |  |-- hs2: Directory with Alignment summary files of all the mapped samples.
 |  |-- qc: Directory with output files of Fastp(HTML, JSON and FASTA) of each sample.
 |  |-- stringtie: Directory with output files of Stringtie 1st run (Reference annotation) of each sample (ABUND, BAM, GTF).
 |  |-- stringtie_2: Directory with output files of Stringtie 2nd run (Merged annotation) of each sample (ABUND, BAM, GTF).
 |  |-- fhs_glm_pipeline.log: Log file of the pipeline.
-|**|-- gene_count_matrix.csv: Gene count matrix. Used as input to edgeR/DEseq for differential expression analysis of genes.***
+|  |-- gene_count_matrix.csv: Gene count matrix. Used as input to edgeR/DEseq for differential expression analysis of genes.***
 |  |-- merge.gtf: Merged GTF file obtained from Stringtie merge.
 |  |-- pde_gtf.txt: File containing list of paths of all sample gtf files with sample IDs (Input file of prepDE.py).
 |  |-- pipeline_done.txt: Internal file of pipeline used to skip already finished steps.
