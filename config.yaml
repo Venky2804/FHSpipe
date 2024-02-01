@@ -1,11 +1,11 @@
 ##Please input the Absolute path of the tools
-fastp: /home/haitoshailesh/Niabdata/venkat/tools/fastp/bin/fastp
-hisat2: /home/haitoshailesh/Niabdata/venkat/tools/hisat2-2.2.1/hisat2
-samtools: /home/haitoshailesh/Niabdata/venkat/tools/samtools-1.11/samtools
-stringtie: /home/haitoshailesh/Niabdata/venkat/tools/stringtie-2.1.4/stringtie
-gffcompare: /home/haitoshailesh/Niabdata/venkat/tools/gffcompare-0.11.2/gffcompare
-prepDE: /home/haitoshailesh/Niabdata/venkat/tools/stringtie-2.1.4/prepDE.py
-bedtools: /home/haitoshailesh/Niabdata/venkat/tools/bedtools-2.28.0/bin/bedtools
-OrfPredictor: /home/haitoshailesh/Niabdata/venkat/tools/OrfPredictor/OrfPredictor.pl
-CPC2: /home/haitoshailesh/Niabdata/venkat/tools/CPC2-1.0.1/bin/CPC2.py
-rpsblast: /home/haitoshailesh/Niabdata/venkat/tools/ncbi-blast-2.11.0+/bin/rpsblast
+fastp: /home/user/tools/fastp/bin/fastp
+hisat2: /home/user/tools/hisat2-2.2.1/hisat2
+samtools: /home/user/tools/samtools-1.11/samtools
+stringtie: /home/user/tools/stringtie-2.1.4/stringtie
+gffcompare: /home/user/tools/gffcompare-0.11.2/gffcompare
+prepDE: /home/user/tools/stringtie-2.1.4/prepDE.py
+bedtools: /home/user/tools/bedtools-2.28.0/bin/bedtools
+OrfPredictor: /home/user/tools/OrfPredictor/OrfPredictor.pl
+CPC2: /home/user/tools/CPC2-1.0.1/bin/CPC2.py
+rpsblast: /home/user/tools/ncbi-blast-2.11.0+/bin/rpsblast
