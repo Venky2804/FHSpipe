@@ -64,7 +64,11 @@ print("FHS Pipeline started at:", time+"\n", file = log, flush=True)
 
 t = str(args.threads)
 folder = args.path #path of all samples
-print(len([name for name in os.listdir(folder) if name.endswith(".fastq")]), "FASTQ sample files were given as input", file=log)
+numsamp = len([name for name in os.listdir(folder) if name.endswith(".fastq")]) 
+if numsamp > 0 :
+    print(numsamp, "FASTQ sample files were given as input", file=log)
+else:
+    print("Input sample folder empty or files not in fastq format. Unzip the files if in zip format")
 done = open(fld+"/pipeline_done.txt", "a+")
 fin = open(fld+"/pipeline_done.txt").read().splitlines()
 d = []
