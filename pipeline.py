@@ -69,6 +69,7 @@ if numsamp > 0 :
     print(numsamp, "FASTQ sample files were given as input", file=log)
 else:
     print("Input sample folder empty or files not in fastq format. Unzip the files if in zip format")
+    sys.exit(0)
 done = open(fld+"/pipeline_done.txt", "a+")
 fin = open(fld+"/pipeline_done.txt").read().splitlines()
 d = []
