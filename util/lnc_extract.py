@@ -85,7 +85,7 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
         lenfil = open(out+"_lenfil.fasta").read().splitlines() #Reads Len fil file
         orf6 =  open("ORF6frame.txt").readlines()
         dna = [] #DNA header index list
-        pro = [] #ORF header index list
+        pro = [] #ORF 6 header index list
         discard = [] #ORF headers to be discarded
         delete = [] #Contigs to be discarded
         for line in range(len(lenfil)):
@@ -116,8 +116,8 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
         orfout = open(out+"_orfout.fasta").read().splitlines()
         dele2 = open("delete_orffilter").read().splitlines()
         orfptn = open(out+"_ptn_orffil.fasta", "w+") #orf filtered ptn fasta
-        dis = []
-        orfhead = [] #line nums of headers in ORF out file
+        dis = [] #headers discarded in ORF filter
+        orfhead = [] #line nums of headers in ORFpredictor output file
         for line in dele2:
             dis.append(line)
         for lind in range(len(orfout)):
