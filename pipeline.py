@@ -126,7 +126,7 @@ for f in sorted(os.listdir(folder)):
         print("Assembling", str(x), end = "", flush=True)
         print("Assembling", str(x), end = "", file = log, flush=True)
 ################            F A S T P            ####################
-        s2 = fp.run(args.seq, fastp, x, fpres)
+        s2 = fp.run(args.seq, fastp, x, t, fpres)
 ################           H I S A T 2           ####################
         s3 = hs2.run(args.seq, hisat2, t, hs2db, x, hsres)
 ################          S A M 2 B A M          ####################
