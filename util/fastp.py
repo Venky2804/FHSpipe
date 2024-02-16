@@ -2,11 +2,15 @@
 #To run fastp
 import subprocess, sys, json
 
-def run(seq, fastp, x, fpres):
+def run(seq, fastp, x, t, fpres):
+    if t > 16:
+        t = 16
+    else:
+        t = t
     if seq == "S":
-        fp = fastp+" -h ../qc/"+x+".html -j ../qc/"+x+".json -a auto -w 16 -e 25 -l 30 -p -i "+x+".fastq -o ../qc/"+x+".fastq"
+        fp = fastp+" -h ../qc/"+x+".html -j ../qc/"+x+".json -a auto -w "+t+" -e 25 -l 30 -p -i "+x+".fastq -o ../qc/"+x+".fastq"
     elif seq == "P":
-        fp = fastp+" --detect_adapter_for_pe --correction -h ../qc/"+x+".html -j ../qc/"+x+".json -a auto -w 16 -e 25 -l 30 -p -i "+x+"_R1.fastq -I "+x+"_R2.fastq -o ../qc/"+x+"_R1.fastq -O ../qc/"+x+"_R2.fastq"
+        fp = fastp+" --detect_adapter_for_pe --correction -h ../qc/"+x+".html -j ../qc/"+x+".json -a auto -w "+t+" -e 25 -l 30 -p -i "+x+"_R1.fastq -I "+x+"_R2.fastq -o ../qc/"+x+"_R1.fastq -O ../qc/"+x+"_R2.fastq"
     fp1 = fp.split()
     s1 = subprocess.run(fp1, stderr=subprocess.DEVNULL)
     if not s1.returncode == 0:
