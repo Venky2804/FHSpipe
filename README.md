@@ -25,7 +25,7 @@ os,shutil, subprocess, argparse, sys, json, yaml
 ### FILES REQUIRED:
 - Reference genome fasta file (.fasta/.fa)  
 - Reference genome annotation file (.gff/.gtf)  
-- All Sample fastq files in a single directory (no extra files). Single end sequenced files should be named as Sample.fastq. Pair end sequenced files should be names as Sample_R1.fastq and Sample_R2.fastq to avoid errors  
+- All Sample fastq files in a single directory (no extra files). Single end sequenced files should be named as Sample.fastq. Pair end sequenced files should be names as Sample_R1.fastq and Sample_R2.fastq to avoid errors. Unzip the sample files if in zip format (.gz)  
 
 
 
