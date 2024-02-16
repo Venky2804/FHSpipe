@@ -3,8 +3,8 @@
 import subprocess, sys, json
 
 def run(seq, fastp, x, t, fpres):
-    if t > 16:
-        t = 16
+    if int(t) > 16:
+        t = str(16)
     else:
         t = t
     if seq == "S":
