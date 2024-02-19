@@ -143,7 +143,7 @@ for f in sorted(os.listdir(folder)):
         os.chdir(folder)
         stm.write(fld+"/stringtie/"+x+"/"+x+".gtf\n")
         d.append(x)
-    elif x in d and f.endswith(".fastq") and not f.endswith("_2.fastq"):
+    elif x in d and f.endswith(".fastq") and not f.endswith("_R2.fastq"):
         print(x, "analysis already done")
 
 fpres.close()
