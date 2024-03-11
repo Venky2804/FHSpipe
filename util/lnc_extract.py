@@ -5,6 +5,7 @@ import os, subprocess, sys
 
 def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor, rpsblast, pfam, CPC2):
     if "IUX extraction" not in d:
+        code = 0
         print("Extracting I,U,X sequences")
         print("Extracting I,U,X sequences", file = log, flush=True)
         cc = [" class_code \"i\"", " class_code \"u\"", " class_code \"x\""]
@@ -195,5 +196,7 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
                     print(rpsfil[hind+1], file=final)
         final.close()
         print("CPC-filter", file = done, flush=True)
+        code = 1
     else:
         print("CPC filteration already done")
+    return(code)
