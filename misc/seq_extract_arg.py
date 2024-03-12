@@ -48,7 +48,7 @@ for gind in range(len(gene)):
                 E.append(e)
                 if not chrm.startswith("N"):
                     chrm += b.split("\t")[0]
-        if not w.startswith("MSTRG.") and b.startswith("N") and b.split("\t")[2] == "transcript" and "gene_name" in b:
+        if not w.startswith("MSTRG.") and b.startswith("N") and b.split("\t")[2] == "transcript" and "gene_name" in b and "MSTRG" in b:
             name = w
             mid = b.split("\"")[1]
             ge = b.split("\"")[5]
