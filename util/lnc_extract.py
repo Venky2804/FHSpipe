@@ -162,6 +162,7 @@ def run(d, log, t, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredic
         for nof in norf:
             if not nof.startswith("Sequence"):
                 RPS.append(">"+nof.split("\t")[0])
+        lenfil = open(out+"_lenfil.fasta").read().splitlines()
         for shind in range(len(lenfil)):
             if lenfil[shind].startswith(">"):
                 if lenfil[shind] in RPS:
