@@ -205,7 +205,7 @@ if not os.path.exists("gffcom/extract_iux"):
 os.chdir("gffcom/extract_iux")
 if "LNC extraction" not in d:
     gtf = open("../gffcmp.combined.gtf").read().splitlines()
-    s10 = lncxt.run(d, log, args.out, gtf, bedtools, chrsize, rfa, done, args.len, args.orfl, OrfPredictor, rpsblast, pfam, CPC2)
+    s10 = lncxt.run(d, log, t, args.out, gtf, bedtools, chrsize, rfa, done, args.len, args.orfl, OrfPredictor, rpsblast, pfam, CPC2)
     if s10 == 1:
         print("LNC extraction", file = done, flush=True)
     else:

@@ -3,7 +3,7 @@
 
 import os, subprocess, sys
 
-def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor, rpsblast, pfam, CPC2):
+def run(d, log, t, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor, rpsblast, pfam, CPC2):
     if "IUX extraction" not in d:
         code = 0
         print("Extracting I,U,X sequences")
@@ -139,7 +139,7 @@ def run(d, log, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredictor
         ##########     RPSBLAST (PFAM)     ##########
     if "RPS-filter" not in d:
         print("Running RPSBlast against Pfam database", end="\t")
-        cmd2a = rpsblast+" -db "+pfam+" -query "+out+"_ptn_orffil.fasta -out "+out+"_pfam_rps -evalue 0.001 -outfmt 7"
+        cmd2a = rpsblast+" -db "+pfam+" -query "+out+"_ptn_orffil.fasta -out "+out+"_pfam_rps -evalue 0.001 -outfmt 7 -num_threads "+t
         cmd2 = cmd2a.split()
         rps = subprocess.run(cmd2)
         if not rps.returncode == 0:
