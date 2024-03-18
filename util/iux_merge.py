@@ -7,11 +7,8 @@ def run(fld, flnc, fout):
     head = [] #final lnc header
     for line in flnc:
         if line.startswith(">"):
-            head.append(line)
+            head.append(line.split(">")[1].split("::")[0])
     for lin in gff:
         ggg = lin.split("\t")[8].split("\"")[1]
-        for line in head:
-            tcons = line.split(">")[1].split("::")[0]
-            if tcons == ggg:
-                print(lin, file = fout)
-                break
+        if ggg in head:
+            print(lin, file = fout)
