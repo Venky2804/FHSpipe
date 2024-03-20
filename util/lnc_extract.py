@@ -158,11 +158,10 @@ def run(d, log, t, out, gtf, bedtools, chrsize, rfa, done, lent, orfl, OrfPredic
                         if not x.startswith("#"):
                             RPS.append(">"+x)
         print("-\tNo hits =", len(RPS))
-        print("Number of sequences with no hits against Pfam database (RPS) are:", len(RPS), file = log)
         for nof in norf:
             if not nof.startswith("Sequence"):
                 RPS.append(">"+nof.split("\t")[0])
-        lenfil = open(out+"_lenfil.fasta").read().splitlines()
+        print("Number of sequences with no hits against Pfam database (RPS) and no ORF are:", len(RPS), file = log)
         for shind in range(len(lenfil)):
             if lenfil[shind].startswith(">"):
                 if lenfil[shind] in RPS:
