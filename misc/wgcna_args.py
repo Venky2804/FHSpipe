@@ -48,8 +48,17 @@ def wgcna(infile, sample, des):
 			A = []
 			for line in gtf:
 				if gene in line and "FPKM" in line:
-					if gene == line.split(';')[-5].split("\"")[-2] or gene == line.split(';')[-6].split("\"")[-2]:
-							A.append(line.split(";")[-3].split("\"")[-2])
+					line = line.split("\t")[8].split("; ")
+					mstrg = gname = FPKM = ""
+					for ele in line:
+						if ele.startswith("gene_id"):
+							mstrg = ele.split("\"")[1]
+						elif ele.startswith("ref_gene_name"):
+							gname = ele.split("\"")[1]
+						elif ele.startswith("FPKM"):
+							FPKM = ele.split("\"")[1]
+					if gene == mstrg or gene == gname:
+						A.append(FPKM)
 			print(","+str(max(A)), end = "", file = out)
 	print("")
 
