@@ -15,7 +15,7 @@ os,shutil, subprocess, argparse, sys, json, yaml
 - Hisat2 (http://daehwankimlab.github.io/hisat2/)  
 - Samtools (http://www.htslib.org/download/)  
 - Stringtie (https://ccb.jhu.edu/software/stringtie)  
-- PrepDE.py script (https://ccb.jhu.edu/software/stringtie/dl/prepDE.py - Place along with Stringtie)  
+- PrepDE.py script (https://ccb.jhu.edu/software/stringtie/dl/prepDE.py3 - Place along with Stringtie)  
 - Gffcompare (https://ccb.jhu.edu/software/stringtie/gffcompare.shtml)  
 - Bedtools (https://github.com/arq5x/bedtools2/releases)  
 - OrfPredictor (http://proteomics.ysu.edu/publication/tools_download/OrfPredictor.zip)  
