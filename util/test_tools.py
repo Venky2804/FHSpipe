@@ -106,7 +106,7 @@ def test(config):
         E.append(keys[values.index(tool)])
 
   if len(errors) > 0:
-    print("Unable to find the program(s) ->", ", ".join(errors), "\nPlease check the path in config.yaml file at\n"+yaml)
+    print("Unable to find the program(s) ->", ", ".join(errors), "\nPlease check the path in config.yaml file at\n", config)
     sys.exit(1)
 
   if len(E) > 0:
